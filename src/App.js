@@ -1,18 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from "./components/LandingPage";
 import MainFeature from "./components/MainFeature"; // Replace with your actual main component path
 import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/colorfit" element={<MainFeature />} />
+        <Route path="/main" element={<MainFeature />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
