@@ -12,7 +12,7 @@ export default function Navbar() {
     const toggleMenu = () => setMenuOpen(!menuOpen); 
 
     const handleLogoClick = () => {
-        navigate("/");
+        navigate("/ColorFit");
     
         // Remove hash from URL and scroll to top
         setTimeout(() => {
