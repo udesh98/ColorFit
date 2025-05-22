@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/ColorFit" element={<LandingPage />} />
-        <Route path="/ColorFit/main" element={<MainFeature />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/colorfit" element={<MainFeature />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
