@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ColorFit/static/css/main.fed86c9f.css",
+    "main.js": "/ColorFit/static/js/main.9848ce60.js",
+    "static/js/453.a8d1e576.chunk.js": "/ColorFit/static/js/453.a8d1e576.chunk.js",
+    "static/media/colorfitMainNOBG.png": "/ColorFit/static/media/colorfitMainNOBG.1e55f66d596359a6de95.png",
+    "static/media/hero1.avif": "/ColorFit/static/media/hero1.72c09fe57ca1b1c606ac.avif",
+    "static/media/mainLogoCF.png": "/ColorFit/static/media/mainLogoCF.8ce14cfa4c0a71f9ee54.png",
+    "index.html": "/ColorFit/index.html",
+    "main.fed86c9f.css.map": "/ColorFit/static/css/main.fed86c9f.css.map",
+    "main.9848ce60.js.map": "/ColorFit/static/js/main.9848ce60.js.map",
+    "453.a8d1e576.chunk.js.map": "/ColorFit/static/js/453.a8d1e576.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fed86c9f.css",
+    "static/js/main.9848ce60.js"
+  ]
+}
