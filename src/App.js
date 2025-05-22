@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/colorfit" element={<MainFeature />} />
+        <Route path="/main" element={<MainFeature />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
