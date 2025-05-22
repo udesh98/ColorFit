@@ -38,9 +38,37 @@ export default function Navbar() {
             <div className="w-full px-4 md:px-6 lg:px-12 py-4 flex justify-between items-center">
                 <button onClick={handleLogoClick}><img src={img} alt="ColorFit Logo" className="h-8 md:h-10 w-auto" loading="lazy"/></button>
                 <div className="hidden md:flex space-x-6">
-                    <a href="/#home" onClick={() => navigate("/#home")} className="hover:text-blue-500">Home</a>
-                    <a href="/#about" onClick={() => navigate("/#about")} className="hover:text-blue-500">About</a>
-                    <a href="/#contact" onClick={() => navigate("/#contact")} className="hover:text-blue-500">Contact</a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="hover:text-blue-500"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="hover:text-blue-500"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="hover:text-blue-500"
+                    >
+                        Contact
+                    </a>
+                    {/* <a href="/#home" className="hover:text-blue-500">Home</a> */}
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleMenu}>
@@ -50,9 +78,36 @@ export default function Navbar() {
             </div>
             {menuOpen && (
                 <div className="md:hidden px-4 pb-4">
-                    <a href="/#home" onClick={() => navigate("/#home")} className="block py-2">Home</a>
-                    <a href="/#about" onClick={() => navigate("/#about")} className="block py-2">About</a>
-                    <a href="/#contact" onClick={() => navigate("/#contact")} className="block py-2">Contact</a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="block py-2"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="block py-2"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="block py-2"
+                    >
+                        Contact
+                    </a>
                 </div>
             )}
         </nav>
