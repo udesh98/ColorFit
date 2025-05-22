@@ -12,7 +12,7 @@ export default function Navbar() {
     const toggleMenu = () => setMenuOpen(!menuOpen); 
 
     const handleLogoClick = () => {
-        navigate("/");
+        navigate("/ColorFit/");
     
         // Remove hash from URL and scroll to top
         setTimeout(() => {
@@ -38,9 +38,9 @@ export default function Navbar() {
             <div className="w-full px-4 md:px-6 lg:px-12 py-4 flex justify-between items-center">
                 <button onClick={handleLogoClick}><img src={img} alt="ColorFit Logo" className="h-8 md:h-10 w-auto"/></button>
                 <div className="hidden md:flex space-x-6">
-                    <a href="/#home" className="hover:text-blue-500">Home</a>
-                    <a href="/#about" className="hover:text-blue-500">About</a>
-                    <a href="/#contact" className="hover:text-blue-500">Contact</a>
+                    <a href="/ColorFit/#home" className="hover:text-blue-500">Home</a>
+                    <a href="/ColorFit/#about" className="hover:text-blue-500">About</a>
+                    <a href="/ColorFit/#contact" className="hover:text-blue-500">Contact</a>
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleMenu}>
@@ -50,9 +50,9 @@ export default function Navbar() {
             </div>
             {menuOpen && (
                 <div className="md:hidden px-4 pb-4">
-                    <a href="/#home" className="block py-2">Home</a>
-                    <a href="/#about" className="block py-2">About</a>
-                    <a href="/#contact" className="block py-2">Contact</a>
+                    <a href="/ColorFit/#home" className="block py-2">Home</a>
+                    <a href="/ColorFit/#about" className="block py-2">About</a>
+                    <a href="/ColorFit/#contact" className="block py-2">Contact</a>
                 </div>
             )}
         </nav>

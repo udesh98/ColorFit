@@ -53,7 +53,7 @@ export default function LandingPage() {
                         ColorFit is your destination for designer and comfortable clothes for any occasion.
                     </p>
                     <div className="flex gap-4">
-                        <button onClick={() => navigate("/main")} className="bg-white text-black px-6 py-3 rounded-md shadow hover:bg-transparent hover:text-white hover:border hover:border-white hover:scale-105 transition transform duration-200">
+                        <button onClick={() => navigate("/ColorFit/main")} className="bg-white text-black px-6 py-3 rounded-md shadow hover:bg-transparent hover:text-white hover:border hover:border-white hover:scale-105 transition transform duration-200">
                             Get Started
                         </button>
                     </div>
@@ -77,7 +77,7 @@ export default function LandingPage() {
                             Effortlessly find matching colors for your outfits with our easy-to-use ColorFit app.
                             Mix and match outfits based on color harmony. See live previews, color suggestions, and outfit recommendations tailored to your preferences.
                         </p>
-                        <button onClick={() => navigate("/main")} className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-lg font-semibold rounded-full shadow-xl hover:scale-105 transition transform duration-200">
+                        <button onClick={() => navigate("/ColorFit/main")} className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-lg font-semibold rounded-full shadow-xl hover:scale-105 transition transform duration-200">
                             Try ColorFit
                         </button>
                     </div>
