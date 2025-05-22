@@ -23,6 +23,18 @@ export default function ColorMatcherApp() {
   const [allColors, setAllColors] = useState([]);
   const [filteredColors, setFilteredColors] = useState([]);
 
+  // Function to check if colors are a good match (based on contrast)
+  const isColorMatch = (color1, color2) => {
+    if (!color1 || !color2) return false;
+    const contrast = chroma.contrast(color1, color2);
+    return contrast > 1.5 && contrast < 7;  // Good contrast ensures readability
+  };
+
+  // Handle match button click
+  const handleMatch = () => {
+    setMatchResult(isColorMatch(topColor, bottomColor));
+  };
+
   // Fetch color data from the API
   useEffect(() => {
     fetch("https://cdn.jsdelivr.net/npm/color-name-list@11.3.0/dist/colornames.json")
@@ -45,18 +57,6 @@ export default function ColorMatcherApp() {
       setFilteredColors([]); // Clear suggestions when search is empty
     }
   }, [search, allColors]);
-
-  // Function to check if colors are a good match (based on contrast)
-  const isColorMatch = (color1, color2) => {
-    if (!color1 || !color2) return false;
-    const contrast = chroma.contrast(color1, color2);
-    return contrast > 1.5 && contrast < 7;  // Good contrast ensures readability
-  };
-
-  // Handle match button click
-  const handleMatch = () => {
-    setMatchResult(isColorMatch(topColor, bottomColor));
-  };
 
   return (
     <div className="min-h-screen font-sans text-gray-800 bg-white">
@@ -128,7 +128,7 @@ export default function ColorMatcherApp() {
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.02 }}
             onClick={handleMatch}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition"
+            className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl transition"
           >
             Check Color Match
           </motion.button>
